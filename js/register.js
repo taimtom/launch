@@ -5,13 +5,16 @@ const getRegistrationDetail = () => {
   const phoneNumber = document.getElementById("phone_number").value;
   const practiceName = document.getElementById("practice_name").value;
   const otherInfo = document.getElementById("other_info").value;
+  const eventId = "SM0312";
+
   const registrationDetail = {
-    firstName: firstName,
-    lastName: lastName,
+    event: eventId,
+    first_name: firstName,
+    last_name: lastName,
     email: email,
-    phoneNumber: phoneNumber,
-    practiceName: practiceName,
-    otherInfo: otherInfo,
+    phone_number: phoneNumber,
+    practice_name: practiceName,
+    other_info: otherInfo,
   };
   return registrationDetail;
 };
@@ -25,14 +28,14 @@ function handleSubmit(event) {
   event.preventDefault();
   const regDetail = getRegistrationDetail();
   console.log(regDetail);
-  const baseUrl = "localhost:8000";
-  const apiUrl = "/api/events/smartdvm_events_register/list/";
+  const baseUrl = "http://localhost:8000";
+  const apiUrl = "/api/event/smartdvm_events_register/list/";
   $.ajax({
     contentType: "application/json",
     dataType: "json",
     url: baseUrl + apiUrl,
     type: "POST",
-    data: regDetail,
+    data: JSON.stringify(regDetail),
     success: successCallback,
     error: errorCallback,
   });
