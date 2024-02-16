@@ -24,7 +24,7 @@ function successCallback(data) {
   console.log("success occurred", data);
 }
 function errorCallback(err) {
-  document.getElementById("regResponse").innerHTML = err.message;
+  document.getElementById("regResponse").innerHTML = "Error occurred. try again or contact smartdvm";
   console.log("error occurred", err);
 }
 function handleSubmit(event) {
