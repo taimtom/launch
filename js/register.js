@@ -5,7 +5,7 @@ const getRegistrationDetail = () => {
   const phoneNumber = document.getElementById("phone_number").value;
   const practiceName = document.getElementById("practice_name").value;
   const otherInfo = document.getElementById("other_info").value;
-  const eventId = "SM0312";
+  const eventId = "SM8716";
 
   const registrationDetail = {
     event: eventId,
