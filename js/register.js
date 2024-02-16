@@ -31,7 +31,7 @@ function handleSubmit(event) {
   event.preventDefault();
   const regDetail = getRegistrationDetail();
   console.log(regDetail);
-  const baseUrl = "http://localhost:8000";
+  const baseUrl = "https://testbck.smartdvm.com";
   const apiUrl = "/api/event/smartdvm_events_register/list/";
   $.ajax({
     contentType: "application/json",
