@@ -19,9 +19,12 @@ const getRegistrationDetail = () => {
   return registrationDetail;
 };
 function successCallback(data) {
+  document.getElementById("regResponse").innerHTML =
+    "Registration successful. Your registration ID is " + data.id;
   console.log("success occurred", data);
 }
 function errorCallback(err) {
+  document.getElementById("regResponse").innerHTML = err.message;
   console.log("error occurred", err);
 }
 function handleSubmit(event) {
@@ -36,8 +39,8 @@ function handleSubmit(event) {
     url: baseUrl + apiUrl,
     type: "POST",
     data: JSON.stringify(regDetail),
-    success: successCallback,
-    error: errorCallback,
-  });
+  })
+    .done(successCallback)
+    .fail(errorCallback);
 }
 $("#pageForm").on("submit", handleSubmit);
