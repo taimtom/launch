@@ -12017,7 +12017,7 @@ textarea {
   content: "";
   right: -200px;
   top: -200px;
-  background: url("../images/blob-1.svg") no-repeat;
+  /* background: url("../images/blob-1.svg") no-repeat; */
   background-size: cover;
   width: 1113.97px;
   height: 850.62px;
@@ -12438,4 +12438,16 @@ textarea {
 }
 .site-footer ul.quick-info li.address:before {
   content: "\e8b4";
+}
+
+.img_icon {
+  height: 3rem;
+  width: 3rem;
+}
+
+.launch {
+  color: #009eed;
+}
+.agenda {
+  font-weight: bold;
 }
