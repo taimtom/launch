@@ -4,7 +4,6 @@ const getRegistrationDetail = () => {
   const email = document.getElementById("email").value;
   const phoneNumber = document.getElementById("phone_number").value;
   const practiceName = document.getElementById("practice_name").value;
-  const otherInfo = document.getElementById("other_info").value;
   const eventId = "SM8716";
 
   const registrationDetail = {
@@ -14,7 +13,6 @@ const getRegistrationDetail = () => {
     email: email,
     phone_number: phoneNumber,
     practice_name: practiceName,
-    other_info: otherInfo,
   };
   return registrationDetail;
 };
